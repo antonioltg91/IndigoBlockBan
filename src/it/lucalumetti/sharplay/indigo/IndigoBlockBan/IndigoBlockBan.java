@@ -11,17 +11,12 @@ public class IndigoBlockBan extends JavaPlugin{
 	
 	public void onEnable(){
 		saveDefaultConfig();
-		initializeCommands(banlist);
+		getCommand("IndigoBlockBan").setExecutor(new CommandExc(this,banlist, log));
+		log.info("IndigoBlockBan avviato!");
 	}
 	
 	public void onDisable(){
 		
-	}
-	
-	public void initializeCommands(BanList bn) {
-	CommandExc cmdexc = new CommandExc(this,bn);
-	getCommand("IBB").setExecutor(cmdexc);
-	getCommand("IndigoBlockBan").setExecutor(cmdexc);
 	}
 	
 }
