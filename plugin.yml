@@ -1,0 +1,9 @@
+main: it.lucalumetti.sharplay.indigo.IndigoBlockBan.IndigoBlockBan
+name: IndigoBlockBan
+version: 0.1b
+commands:
+   IndigoBlockBan:
+     description: Comando principale.
+     aliases: [IBB]
+     permission: IBB.main
+     usage: &cHai sbagliato qualcosa&f ->&e /&lt;command&gt; help
