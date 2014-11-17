@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class BanList {
@@ -42,6 +43,20 @@ public class BanList {
 	    }
 	    temp.add(permesso);
 	    map.put(key, temp);
+	}
+	//The permission contains the negate permission
+	//if List of key contains USE, the item cannot be use
+	public boolean isBan(String key,String permesso){
+		if(map.containsKey(key))
+			if(map.get(key).contains(permesso))
+				return true;
+		return false;
+	}
+	
+	public void printLista(Player player){
+		for(Map.Entry<String, List<String>> entry: map.entrySet())
+			player.sendMessage(entry.getKey() + "§c: " + entry.getValue());
+			
 	}
 	
 }

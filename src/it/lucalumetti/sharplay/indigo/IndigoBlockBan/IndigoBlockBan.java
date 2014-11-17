@@ -12,6 +12,8 @@ public class IndigoBlockBan extends JavaPlugin{
 	public void onEnable(){
 		saveDefaultConfig();
 		getCommand("IndigoBlockBan").setExecutor(new CommandExc(this,banlist, log));
+		this.getServer().getPluginManager().registerEvents(new EventCheck(this, banlist), this);
+		banlist.readLista();
 		log.info("IndigoBlockBan avviato!");
 	}
 	
