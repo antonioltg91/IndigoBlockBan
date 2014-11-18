@@ -3,4 +3,6 @@ name: IndigoBlockBan
 version: 0.1b
 commands:
    IndigoBlockBan:
+     permission: IndigoBlockBan.admin
      description: Comando principale
+     aliases: [ibb]
