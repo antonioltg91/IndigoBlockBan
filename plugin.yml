@@ -1,8 +1,21 @@
 main: it.lucalumetti.sharplay.indigo.IndigoBlockBan.IndigoBlockBan
 name: IndigoBlockBan
 version: 0.1b
+description: Sharplay item ban plugin.
+author: LucaLumetti
+website: http://www.sharplay.net/
 commands:
    IndigoBlockBan:
      permission: IndigoBlockBan.admin
      description: Comando principale
      aliases: [ibb]
+     usage: ibb WORLD | USE | PLACE | CRAFT | OWN.
+
+permissions:
+   IndigoBlockBan.*:
+     description: Gives access to all IndigoBlockBan commands
+     children:
+       IndigoBlockBan.admin: true
+   IndigoBlockBan.admin:
+     description: Allows you to see how many times others have burned to death
+     default: op
