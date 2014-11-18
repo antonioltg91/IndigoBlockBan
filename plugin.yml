@@ -17,5 +17,5 @@ permissions:
      children:
        IndigoBlockBan.admin: true
    IndigoBlockBan.admin:
-     description: Allows you to see how many times others have burned to death
+     description: Admin permission
      default: op
